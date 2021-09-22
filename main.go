@@ -1,13 +1,16 @@
 package main
 
 import (
-	// srcからの相対パス
 	"fmt"
-	"log"
-	"todo_app/config"
+	"todo_app/app/models"
 )
 
 func main() {
-	fmt.Println(config.Config)
-	log.Println("test")
+	u := &models.User{}
+	u.Name = "lamp"
+	u.Email = "lamp@example.com"
+	u.PassWord = "password"
+	fmt.Println(u)
+
+	u.CreateUser()
 }
