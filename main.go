@@ -6,11 +6,8 @@ import (
 )
 
 func main() {
-	u := &models.User{}
-	u.Name = "lamp"
-	u.Email = "lamp@example.com"
-	u.PassWord = "password"
+	u, _ := models.GetUser(1)
+	u.DeleteUser()
+	u, _ = models.GetUser(1)
 	fmt.Println(u)
-
-	u.CreateUser()
 }
