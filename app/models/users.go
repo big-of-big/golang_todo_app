@@ -27,7 +27,8 @@ func (u *User) CreateUser() (err error) {
 		u.Name,
 		u.Email,
 		Encrypt(u.PassWord),
-		time.Now())
+		time.Now(),
+	)
 
 	if err != nil {
 		log.Fatalln(err)
